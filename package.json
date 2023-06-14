@@ -1,0 +1,17 @@
+{
+  "name": "phonebook-part3",
+  "version": "1.0.0",
+  "description": "Phonebook app as a separate repo to avoid alleged problems during part 3 of the Fullstack open course.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
