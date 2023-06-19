@@ -4,12 +4,14 @@
   "description": "Phonebook app as a separate repo to avoid alleged problems during part 3 of the Fullstack open course.",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
