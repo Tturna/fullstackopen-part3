@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
+// eslint-disable-next-line no-undef
 mongoose.connect(process.env.CONN_STRING)
-.then(res => {
-    console.log('Connected to db!');
-})
-.catch(e => {
-    console.log(e);
-});
+    .then(() => {
+        console.log('Connected to db!');
+    })
+    .catch(e => {
+        console.log(e);
+    });
 
 const userEntrySchema = mongoose.Schema({
     name: {
@@ -29,7 +30,7 @@ const userEntrySchema = mongoose.Schema({
 });
 
 userEntrySchema.set('toJSON', {
-    transform: (document, returnedObject) => {
+    transform: (_document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString();
         delete returnedObject._id;
         delete returnedObject.__v;
