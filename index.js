@@ -20,6 +20,7 @@ const morg = morgan(function (tokens, req, res) {
 // Middleware
 app.use(express.json())
 app.use(morg)
+app.use(express.static('build'))
 
 let entries = [
     { 
@@ -34,7 +35,7 @@ let entries = [
     },
     { 
       "id": 3,
-      "name": "Dan Abramov", 
+      "name": "Daniel Abramov", 
       "number": "12-43-234345"
     },
     { 
@@ -108,7 +109,7 @@ app.delete('/api/persons/:id', (req, res) => {
     }
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT} `)
 })
